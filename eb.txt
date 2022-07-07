@@ -1,0 +1,42 @@
+# include <stdio.h>
+void main ()
+{
+    int ElectricBill,reading,totall;
+    printf("commercial\n");
+    printf("domestic\n");
+    printf("selacte a Bill Type \n");
+    scanf("%d",&ElectricBill);
+    printf("Enter the Bill amount\n");
+    scanf("%d",&reading);
+    switch (ElectricBill)
+{
+    case 1:
+    if(reading>100)
+    {
+        totall=reading*1.5;
+        printf("The totall amount is : %d",totall);
+    }
+    else
+    {
+        printf("There is No amount:");
+    }
+    break;
+    case 2:
+    if(reading>100)
+    {
+        totall=reading*7;
+        printf("The Totall amount is : %d",totall);
+        
+    }
+    else if ((reading<100)&&(reading>0))
+    {
+        totall=reading*3;
+        printf("The Totall amount :%d",totall);
+    }
+    break;
+    default :
+    printf("There is No amount:");
+    break;
+}
+    
+}

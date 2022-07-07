@@ -1,0 +1,15 @@
+#include <stdio.h>
+void main()
+{
+    int a,b,i,j=0;
+    printf("Enter the value of A:");
+    scanf("%d",&a);
+    printf("Enter the vale of B:");
+    scanf("%d",&b);
+    for(i=0;i<b;i++)
+    {
+        a++;
+        
+    }
+    printf("%d",a);
+} 

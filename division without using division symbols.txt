@@ -1,0 +1,18 @@
+#include <stdio.h>
+void main()
+{
+    int a,b,i,j=0,x=1;
+    printf("Enter the value of A:");  
+    scanf("%d",&a);
+    printf("Enter the vale of B:");
+    scanf("%d",&b);
+    j=a;
+    while(a<b)
+    {
+    
+        a=a+j;
+        x++;
+    }
+    
+    printf("%d",x);
+}

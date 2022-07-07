@@ -1,0 +1,40 @@
+# include <stdio.h>
+void main()
+{
+    int selected,;
+    printf("*****************hotal saravana bhavan******************");
+    printf("\nnew manu");
+    printf("\n1.purota   Rs 10");
+    printf("\n2.chappaty Rs 20");
+    printf("\n3.itdly    Rs 30");
+    printf("\n4.mills    Rs 40");
+    printf("\n5.dosa     Rs 50");
+    printf("\n6.select your dishe");
+    while (EXIT!=0)
+    {
+    switch (selected)
+    {
+        case 1
+        {
+            printf("\nyour selected purota :");
+            printf("\nEnter the quantaty :");
+            scanf("%d",&qua);
+            printf("Bill amount is %d",qua*purota);
+            total+=qua*purota;
+            printf("If you want to continue ? or (PRESS 0 to EXIT");
+            scanf("%d",&EXIT);
+        }
+        case 2
+        {
+            printf("\nyour selected purota :");
+            printf("\nEnter the quantaty :");
+            scanf("%d",&qua);
+            printf("Bill amount is %d",qua*);
+            total+=qua*purota;
+            printf("If you want to continue ? or (PRESS 0 to EXIT");
+            scanf("%d",&EXIT);
+        }
+    }
+    }
+    
+}
