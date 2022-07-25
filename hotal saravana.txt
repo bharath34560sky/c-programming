@@ -1,40 +1,76 @@
-# include <stdio.h>
+#include<stdio.h>
 void main()
 {
-    int selected,;
-    printf("*****************hotal saravana bhavan******************");
-    printf("\nnew manu");
-    printf("\n1.purota   Rs 10");
-    printf("\n2.chappaty Rs 20");
-    printf("\n3.itdly    Rs 30");
-    printf("\n4.mills    Rs 40");
-    printf("\n5.dosa     Rs 50");
-    printf("\n6.select your dishe");
-    while (EXIT!=0)
-    {
-    switch (selected)
-    {
-        case 1
-        {
-            printf("\nyour selected purota :");
-            printf("\nEnter the quantaty :");
-            scanf("%d",&qua);
-            printf("Bill amount is %d",qua*purota);
-            total+=qua*purota;
-            printf("If you want to continue ? or (PRESS 0 to EXIT");
-            scanf("%d",&EXIT);
-        }
-        case 2
-        {
-            printf("\nyour selected purota :");
-            printf("\nEnter the quantaty :");
-            scanf("%d",&qua);
-            printf("Bill amount is %d",qua*);
-            total+=qua*purota;
-            printf("If you want to continue ? or (PRESS 0 to EXIT");
-            scanf("%d",&EXIT);
-        }
-    }
-    }
-    
+     int opt,idl=10,dos=20,vad=5,poo=15,par=30,con=1,q,x=0;
+     printf("**************Hotel Saravana Bhavan***************");
+     printf("\nMenu List:");
+     printf("\n1.Idly=10");
+     printf("\n2.Dosa=20");
+     printf("\n3.Vadai=5");
+     printf("\n4.Poori=15");
+     printf("\n5.Parota=30");
+     cho:
+     printf("\nEnter Your options:");
+     scanf("%d",&opt);
+     switch(opt)
+     while(con!=0)
+     {
+         case 1:
+         {
+             printf("\nYour Choice is Idly:");
+             printf("\nEnter the Quantity:");
+             scanf("%d",&q);
+             printf("Bill Amount is %d",idl*q);
+             x+=idl*q;
+             break;
+         }
+         
+         case 2:
+         {
+             printf("\nYour Choice is Dosa:");
+             printf("\nEnter the Quantity:");
+             scanf("%d",&q);
+             printf("Bill Amount is %d",dos*q);
+             x+=dos*q;
+         }
+         break;
+         case 3:
+         {
+             printf("\nYour Choice is Vadai:");
+             printf("\nEnter the Quantity:");
+             scanf("%d",&q);
+             printf("Bill Amount is %d",vad*q);
+             x+=vad*q;
+            
+         }
+         break;
+         case 4:
+         {
+             printf("\nYour Choice is Poori:");
+             printf("\nEnter the Quantity:");
+             scanf("%d",&q);
+             printf("Bill Amount is %d",poo*q);
+             x+=poo*q;
+        break;
+         }
+         case 5:
+         {
+             printf("\nYour Choice is Parota:");
+             printf("\nEnter the Quantity:");
+             scanf("%d",&q);
+             printf("Bill Amount is %d",par*q);
+             x+=par*q;
+             break;
+         }
+     }
+        printf("\nDo You Want to continue? (Press 0 to Exit)");
+        scanf("%d",&con);
+        if(con>0)
+             {
+                 goto cho;
+             }
+     printf("\nTotall Bill Amount is %d",x);
+     printf("\nThank You !");
+     
+     
 }
