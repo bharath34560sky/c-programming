@@ -1,0 +1,57 @@
+#include<stdio.h>
+int size,i,j,x,y,m;
+int a[55],b[55],count=0;
+int sum1,sum2;
+void finding(int x,int y,int i,int m)
+{
+    a[i]=y;
+    b[m]=x;
+    for(j=0;j<size;j++)
+    {
+        sum1+=a[j];
+        sum2+=b[j];
+    }
+    if(sum1==sum2)
+    {
+        if(count==0)
+        {
+            printf("The swapping pairs make sum equal is:");
+        }
+        count=1;
+        printf("(%d %d) ",a[i],b[m]);
+    }
+    sum1=0;
+    sum2=0;
+    a[i]=x;
+    b[m]=y;
+}
+void main()
+{
+    
+    printf("Enter the siz of array :");
+    scanf("%d",&size);
+    printf("Enter the A elements:");
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Enter the B elements:");
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&b[i]);
+    }
+    for(i=0;i<size;i++)
+    {
+        for(m=0;m<size;m++)
+        {
+            x=a[i];
+            y=b[m];
+            finding(x,y,i,m);
+        }
+        
+    }
+    if(count==0)
+    {
+        printf("There is no swapping pairs make sum equal:");
+    }
+}
