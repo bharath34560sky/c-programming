@@ -1,0 +1,91 @@
+#include<stdio.h>
+#include<stdlib.h>
+int i,j,size,temp,l,g;
+int a[55],b[55],e[4],c[4]={0,0,0,0};
+int count1=1,count2=1,count3=0;
+int z,n,sum,x,y,m;
+void finding(int z,int n,int x,int y );
+void negative(int f)
+{
+    for(l=1;l<count1;l++)
+    {
+            if(b[l]+f==0)
+            {
+                printf("(%d %d)",b[l],f);
+                
+            }
+    }
+}
+void positive ()
+{
+    for(z=1;z<count1;z++)
+    {
+        for(n=1;n<count2;n++)
+        {
+            sum=a[n];
+            for(x=n+1;x<count2;x++)
+            {
+                for(y=x;y<count2;y++)
+                {
+                    sum+=a[y];
+                    if(b[z]+sum==0)
+                    {
+                        finding(z,n,x,y);
+                    }
+                }
+                sum=a[n];
+            }
+        }
+    }
+}
+void finding(int z,int n,int x,int y )
+{
+    e[0]=b[z],e[1]=a[n],e[2]=a[x],e[3]=a[y];
+    for(m=0;m<4;m++)
+    {
+        if(e[m]!=c[m])
+        {
+            count3++;
+        }
+    }
+    if(count3>0)
+    {
+        printf("(%d ",b[z]);
+        printf("%d ",a[n]);
+        for(g=x;g<=y;g++)
+        {
+            printf(" %d",a[g]);
+        }
+        printf(")");
+        c[0]=b[z],c[1]=a[n],c[2]=a[x],c[3]=a[y];
+    }  
+    
+    count3=0;
+       
+}
+void main()
+{
+    printf("Enter the size of array:");
+    scanf("%d",&size);
+    printf("Enter the elements:");
+    for(i=1;i<=size;i++)
+    {   
+        scanf("%d",&temp);
+        if(temp<0)
+        {
+            b[count1]=temp; 
+            count1++;
+        }
+        else 
+        {
+          a[count2]=temp;
+          count2++;
+        }
+    }
+    for(i=1;i<count2;i++)
+    {
+        negative(a[i]);
+    }
+    positive();
+    
+}
