@@ -1,0 +1,104 @@
+#include<stdio.h>
+#include<string.h>
+int i,j,k,count=0,Prime_count=0,Prime_found=0;
+char a[55],b[55],f,Not_prime;
+int x,z,space_count=0,m;
+void Notprime(char Not_prime);
+void prime(int count)
+{
+    count+=1;
+    for(x=1;x<=count;x++)
+    {
+        if(count%x==0)
+        {
+            Prime_count++;
+        }
+    }
+    if(Prime_count==2)
+    {
+        Prime_found=1;
+    }
+    else 
+    {
+        Not_prime=a[i];
+        Notprime(Not_prime);
+    }
+    Prime_count=0;
+    
+}
+void Notprime(char Not_prime)
+{
+    for(m=0;m<k;m++)
+    {
+        if(Not_prime==a[m])
+        {
+            a[m]=' ';
+        }
+    }
+}
+void stri (char f)
+{
+    for(z=0;z<k;z++)
+    {
+        if(f==b[z])
+        {
+            b[z]=' ';
+        }
+    }
+}
+void main()
+{
+    int g;
+    printf("Enter the string:");
+    scanf("%s",a);
+    k=strlen(a);
+    for(i=0;i<k;i++)
+    {
+        b[i]=a[i];
+    }
+    
+    for(i=0;i<k;i++)
+    {
+        
+        for(j=i+1;j<k;j++)
+        {
+            if(a[i]==a[j])
+            {
+                count++;
+            }
+        }
+       f=a[i];
+        prime (count);
+        count=0;
+        if(Prime_found==1)
+        {
+            stri (f);
+        }
+        Prime_found=0;
+    }
+    for(g=0;g<k;g++)
+    {
+        if(b[g]==' ')
+        {
+            space_count++;
+        }
+    }
+    if(space_count==k)
+    {
+        printf("MARY");
+    }
+    else
+    {
+        for(z=0;z<k;z++)
+    {
+        for(j=z+1;j<k;j++)
+        {
+            if(b[z]==b[j])
+            {
+                b[j]=' ';
+            }
+        }
+    }
+        printf("%s",b);
+    }
+}
