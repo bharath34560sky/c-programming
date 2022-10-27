@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char a[99],b[99];
+    int i,l,count=0;
+    printf("Enter the Fist string:");
+    scanf("%s",a);
+    printf("Enter the Second String:");
+    scanf("%s",b);
+    l=strlen(a);
+    for(i=0;i<l;i++)
+    {
+        if(a[i]==b[i])
+        {
+            count++;
+        }
+    }
+    if(count>=3)
+    {
+        printf("yes");
+    }
+    else
+    {
+        printf("No");
+    }
+}
+
+
+
