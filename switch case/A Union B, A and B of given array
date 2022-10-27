@@ -1,0 +1,53 @@
+#include<stdio.h>
+void main()
+{
+    int i,j,s,s1,f;
+    printf("Enter the 1st array size:");
+    scanf("%d",&s);
+    printf("Enter the 2nd array size:");
+    scanf("%d",&s1);
+    int a [s+s1];
+    printf("Enter First array values:");
+    for(i=1;i<=s+s1;i++)
+    {
+        
+        if(i==s+1)
+        {
+            printf("Enter second array values:");
+        }
+        scanf("%d",&a[i]);
+    }
+    printf("\nA Union B");
+    printf("\nA And B");
+    printf("\nEnter 1 for A Union B and 2 for A And B:");
+    scanf("%d",&f);
+    switch(f)
+    {
+        case 1:
+        {
+            printf("\nA Union B is:");
+            for(i=1;i<=s+s1;i++)
+            {
+                printf("%d",a[i]);
+            }
+            break;
+        }
+        case 2:
+        {
+            printf("A and B is:");
+            for(i=1;i<=s+s1;i++)
+            {
+                for(j=i+1;j<=s+s1;j++)
+                {
+                    if(a[i]==a[j])
+                    {
+                        printf("%d",a[i]);
+                    }
+                }
+            }
+            break;
+        }
+    }
+    
+}
+
