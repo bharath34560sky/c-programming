@@ -8,8 +8,7 @@ void main()
     scanf("%d",&b);
     for(i=0;i<b;i++)
     {
-        a++;
-        
+        a++;        
     }
     printf("%d",a);
 } 
