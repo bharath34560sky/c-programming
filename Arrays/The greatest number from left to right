@@ -1,0 +1,27 @@
+#include<stdio.h>
+void main()
+{
+    int s,i,j;
+    printf("Enter the size:");
+    scanf("%d",&s);
+    int a[s];
+    printf("Enter the elements:");
+    for(i=1;i<=s;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("The Greatest number from left to right: ");
+    for(i=1;i<=s;i++)
+    {
+        for(j=i+1;j<=s;j++)
+        {
+            if(a[i]<a[j])
+            {
+                a[i]=a[j];
+                i=j;
+            }
+        }
+        printf(" %d",a[i]);
+    }
+}
+
