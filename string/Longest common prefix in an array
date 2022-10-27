@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<string.h>
+struct pre 
+{
+    char a[55];
+    int f[55];
+    
+}s[55];
+void main()
+{
+    int i,l,j,k,c;
+    printf("Enter the Number of string:");
+    scanf("%d",&l);
+    printf("Enter the %d string:",l);
+    c=l+1;
+    for(i=1;i<=l;i++)
+    {
+        scanf("%s",s[i].a);
+    }
+    for(i=1;i<=l;i++)
+    {
+        s[i].f[i]=strlen(s[i].a);
+    }
+    for(i=1;i<=l;i++)
+    {
+        for(j=0;j<s[i].f[i];j++)
+        {
+            if(s[i].a[j]==s[i+1].a[j])
+            {
+                s[c].a[j]=s[i].a[j];
+            }
+        }
+        c++;
+    }
+    printf("%s",s[c-1].a);
+    printf(" is the longest common prefix in all the given strings.");
+    
+    
+}
+
