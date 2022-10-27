@@ -1,0 +1,56 @@
+#include<stdio.h>
+void main()
+{
+    int l,i,j,s,IsInRange=0;
+    printf("Enter the stating range:");
+    scanf("%d",&s);
+    printf("Enter the ending range:");
+    scanf("%d",&l);
+    int a[l],b[l];
+    printf("Enter the elements:");
+    for(i=s;i<=l;i++)
+    {
+        b[i]=i;
+    }
+    for(i=s;i<=l;i++)
+    {
+        while(IsInRange==0)
+        {
+            int d;
+            scanf("%d",&d);
+            if(d>=s&&d<=l)
+            {
+                a[i]=d;
+                IsInRange=1;
+            }
+            else
+            {
+                printf("\nEntered number isn't in range");
+                IsInRange=0;
+            }
+        }
+        IsInRange=0;
+    }
+    for(i=s;i<=l;i++)
+    {
+        for(j=s;j<=l;j++)
+        {
+            if(b[i]==a[j])
+            {
+                b[i]=0;
+                break;
+            }
+        }
+    }
+    printf("The missing number is:");
+    for(i=s;i<=l;i++)
+    {
+        if(b[i]>0)
+        {
+            printf(" %d",b[i]);
+        }
+    }
+}
+
+
+
