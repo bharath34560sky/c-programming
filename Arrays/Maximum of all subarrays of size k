@@ -1,0 +1,31 @@
+#include<stdio.h>
+void main()
+{
+    int s,k,i,j,x;
+    printf("Enter the size:");
+    scanf("%d",&s);
+    int a[s];
+    printf("Enter the count of index:");
+    scanf("%d",&k);
+    printf("Enter the array elements:");
+    for(i=1;i<=s;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    x=k-1;
+    for(i=1;i<=s-x;i++)
+    {
+        for(j=i+1;j<=k;j++)
+        {
+            if(a[i]<a[j])
+            {
+                a[i]=a[j];
+            }
+        }
+        printf("\n%d countiguous subarray =",i);
+        printf(" %d",a[i]);
+        k++;
+    }
+    
+}
+
