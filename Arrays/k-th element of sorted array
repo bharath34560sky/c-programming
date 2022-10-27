@@ -1,0 +1,53 @@
+#include<stdio.h>
+void main()
+{
+    int s,i,j,temp=0,k,f;
+    printf("Enter the size:");
+    scanf("%d",&s);
+    int a[s+s];
+    printf("Enter the 1st array elements:\n");
+    for(i=1;i<=s+s;i++)
+    {
+        if(i<=s)
+        {
+            scanf("%d",&a[i]);
+            if(i==s)
+        {
+            printf("\nEnter the 2nd array elements:\n");
+        }
+        }
+        else if(i>s)
+        {
+            scanf("%d",&a[i]);
+        }
+    }
+    
+    printf("The final sorted array would be - ");
+    for(i=1;i<=s+s;i++)
+    {
+        for(j=i+1;j<=s+s;j++)
+        {
+            if(a[i]>a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+       printf(" %d",a[i]);
+    }
+    f:
+    printf("\nEnter the searching index:");
+    scanf("%d",&k);
+    if(k<=s+s)
+    {
+        printf("\nThe %dth element of this array is %d",k,a[k]);
+    }
+    else
+    {
+        printf("\nThe searching index is out of range:");
+        goto f;
+    }
+   
+}
+
